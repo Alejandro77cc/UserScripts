@@ -370,6 +370,16 @@
     "replaceElement": ".fed-page-info"
 },
 {
+    "name": "COLAMANGA",
+    "example": "https://www.colamanga.com/manga-ly91263/1/3556.html",
+    "url": "^https?://www\\.colamanga\\.com/",
+    "include": ".mh_comicpic",
+    "init": "let gx=x=>document.evaluate(x,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;function next(e){let key=window.event?e.keyCode:e.which;if(key==39){e.preventDefault();let n=gx(\"//a[contains(@href,'html') and text()='下一章']\");if(n){n.click()}else{alert('沒有下一章了！')}}};document.addEventListener('keydown',next);function prev(e){let key=window.event?e.keyCode:e.which;if(key==37){e.preventDefault();let p=gx(\"//a[contains(@href,'html') and text()='上一章']\");if(p){p.click()}else{alert('沒有上一章了！')}}};document.addEventListener('keydown',prev);function dcnext(){let n=gx(\"//a[contains(@href,'html') and text()='下一章']\");if(n){n.click()}else{alert('沒有下一章了！')}};document.addEventListener('dblclick',dcnext);",
+    "nextLink": "0",
+    "pinUrl": true,
+    "css": ".mh_wrap{width:100%!important;min-width:100%!important}"
+},
+{
     "name": "看漫画手機版 - 閱讀",
     "example": "https://m.manhuagui.com/comic/30278/405998.html",
     "url": "^https?://m\\.manhuagui\\.com/comic/\\d+/\\d+\\.html",
